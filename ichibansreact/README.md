@@ -56,7 +56,9 @@ WT는 클라이언트와 서버 간에 정보를 주고받을 때 사용되며, 
 
 `ctl + c`
 
-![Untitled](React%E1%84%91%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%AF%20%E1%84%80%E1%85%AE%E1%84%8C%E1%85%A9%20,%20%E1%84%89%E1%85%B5%E1%86%AF%E1%84%92%E1%85%A2%E1%86%BC%20%E1%84%80%E1%85%AE%E1%84%8C%E1%85%A9%20a533d52a224343f797f10f97e70b833e/Untitled.png)
+
+![Untitled](https://github.com/cheiru94/react/assets/146077826/8ee83eb7-3e80-41c1-ae8f-030fb1f54dc7)
+
 
 # `package.json` **와** `package-lock.json`
 
@@ -69,21 +71,25 @@ WT는 클라이언트와 서버 간에 정보를 주고받을 때 사용되며, 
 
 ### dependencies
 
-![Untitled](React%E1%84%91%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%AF%20%E1%84%80%E1%85%AE%E1%84%8C%E1%85%A9%20,%20%E1%84%89%E1%85%B5%E1%86%AF%E1%84%92%E1%85%A2%E1%86%BC%20%E1%84%80%E1%85%AE%E1%84%8C%E1%85%A9%20a533d52a224343f797f10f97e70b833e/Untitled%201.png)
+![Untitled 1](https://github.com/cheiru94/react/assets/146077826/6798f8cd-502e-4b9f-ad27-f779730dbe9e)
+
 
 리엑트 프로젝트에 필요한 라이브러리들이 
 저장되어 있다  (버전을 확인 할 수 있다 )
 
 ### scripts
 
-![Untitled](React%E1%84%91%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%AF%20%E1%84%80%E1%85%AE%E1%84%8C%E1%85%A9%20,%20%E1%84%89%E1%85%B5%E1%86%AF%E1%84%92%E1%85%A2%E1%86%BC%20%E1%84%80%E1%85%AE%E1%84%8C%E1%85%A9%20a533d52a224343f797f10f97e70b833e/Untitled%202.png)
+
+![Untitled 2](https://github.com/cheiru94/react/assets/146077826/097e215f-8052-4b9d-a92a-9736da96a32f)
+
 
 npm으로 프로젝트에서 사용할 수 있는 명령어 
 
 ❗npm start의 start는 `package.json` 의 
     script안에 지정해 놓은 부분이다
 
-![Untitled](React%E1%84%91%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%AF%20%E1%84%80%E1%85%AE%E1%84%8C%E1%85%A9%20,%20%E1%84%89%E1%85%B5%E1%86%AF%E1%84%92%E1%85%A2%E1%86%BC%20%E1%84%80%E1%85%AE%E1%84%8C%E1%85%A9%20a533d52a224343f797f10f97e70b833e/Untitled%203.png)
+![Untitled 3](https://github.com/cheiru94/react/assets/146077826/2cdaa0d5-6cd8-4989-8aeb-772841f68044)
+
 
 ### `package-lock.json`
 
@@ -124,8 +130,9 @@ package.json 에 있는 라이브러리들도 다른 라이브러리에 연관�
 
 - 표면적인 시작 점 1
     
-    ![Untitled](React%E1%84%91%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%AF%20%E1%84%80%E1%85%AE%E1%84%8C%E1%85%A9%20,%20%E1%84%89%E1%85%B5%E1%86%AF%E1%84%92%E1%85%A2%E1%86%BC%20%E1%84%80%E1%85%AE%E1%84%8C%E1%85%A9%20a533d52a224343f797f10f97e70b833e/Untitled%204.png)
-    
+  
+ ![Untitled 4](https://github.com/cheiru94/react/assets/146077826/3cd7491d-1497-4eb6-ad79-62b71bc305dc)
+
 
 `**src/index.js**`
 
@@ -143,7 +150,9 @@ package.json 에 있는 라이브러리들도 다른 라이브러리에 연관�
 <script defer="" src="/static/js/bundle.js"></script>
 ```
 
-![Untitled](React%E1%84%91%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%AF%20%E1%84%80%E1%85%AE%E1%84%8C%E1%85%A9%20,%20%E1%84%89%E1%85%B5%E1%86%AF%E1%84%92%E1%85%A2%E1%86%BC%20%E1%84%80%E1%85%AE%E1%84%8C%E1%85%A9%20a533d52a224343f797f10f97e70b833e/Untitled%205.png)
+![Untitled 5](https://github.com/cheiru94/react/assets/146077826/3de01f4f-3981-48e3-9c6c-2e6de3c6c436)
+
+
 
 webpack을 사용해서  하나의 자바스크립트 파일로 만들어 준다. ( index.js  , App.js 등등)
 
@@ -166,7 +175,10 @@ webpack을 사용해서  하나의 자바스크립트 파일로 만들어 준다
 
 ## src폴더에는 이렇게 만 있어도 잘 돌아 간다
 
-![Untitled](React%E1%84%91%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%AF%20%E1%84%80%E1%85%AE%E1%84%8C%E1%85%A9%20,%20%E1%84%89%E1%85%B5%E1%86%AF%E1%84%92%E1%85%A2%E1%86%BC%20%E1%84%80%E1%85%AE%E1%84%8C%E1%85%A9%20a533d52a224343f797f10f97e70b833e/Untitled%206.png)
+
+![Untitled 6](https://github.com/cheiru94/react/assets/146077826/09437099-fab8-4550-a2e1-f56ca50f0501)
+
+
 
 <aside>
 <img src="https://www.notion.so/icons/checkmark-line_blue.svg" alt="https://www.notion.so/icons/checkmark-line_blue.svg" width="40px" /> 기본적인 setting 구조이다
@@ -280,7 +292,9 @@ return ( ... )
 
 </aside>
 
-![Untitled](React%E1%84%91%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%AF%20%E1%84%80%E1%85%AE%E1%84%8C%E1%85%A9%20,%20%E1%84%89%E1%85%B5%E1%86%AF%E1%84%92%E1%85%A2%E1%86%BC%20%E1%84%80%E1%85%AE%E1%84%8C%E1%85%A9%20a533d52a224343f797f10f97e70b833e/Untitled%207.png)
+
+![Untitled 7](https://github.com/cheiru94/react/assets/146077826/1feff32d-7464-48ed-bd3c-847647b7943c)
+
 
 - html과 95% 같다
 - ⭐빈 태그 ( empty tag )  :  `**<태그명> </태그명>**`  또는  `**<태그명 / >**`
@@ -293,8 +307,10 @@ return ( ... )
 - ⭐ **css** 적용시 classs는 `**className`** 으로 설정
     - `**class**`는 javascript에서 클래스를 정의할 때 사용하는 키워드라 겹친다
     - 사용해도 되는데 에러가 발생한다.
-        
-        ![Untitled](React%E1%84%91%E1%85%A1%E1%84%8B%E1%85%B5%E1%86%AF%20%E1%84%80%E1%85%AE%E1%84%8C%E1%85%A9%20,%20%E1%84%89%E1%85%B5%E1%86%AF%E1%84%92%E1%85%A2%E1%86%BC%20%E1%84%80%E1%85%AE%E1%84%8C%E1%85%A9%20a533d52a224343f797f10f97e70b833e/Untitled%208.png)
+  
+  ![Untitled 8](https://github.com/cheiru94/react/assets/146077826/0c227556-8a7f-47f3-9d85-095ad4eef19b)
+
+
         
 - ⭐주석문 :   `**{/* 이 사이에 넣는다  */}**`
     - { javascript } 이 안 부분 은  javascript라고 인식하고  javascript코드로 실행한다
