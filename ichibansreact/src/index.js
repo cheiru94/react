@@ -59,7 +59,7 @@ const Greeting1 = (props) => {
 // [2]  class style          React.Component로 부터 상속을 받는다. 
 class Greeting2 extends React.Component {
   render() {
-    //                                             this를 붙여줘야 한다.
+    //                                            🟢 this를 붙여줘야 한다 🟢
     const ch = ['안녕', '소프트뱅크 합격', '축하한다, ', this.props.name, '!']   // 스프레드 연산저를 이렇게 배열 처리해서 사용할 수 있다.
     return (
       React.createElement('div', { id: "hello" }, [...ch])  //왜 다시 배열로 묶나?
@@ -67,6 +67,7 @@ class Greeting2 extends React.Component {
   }
 }
 console.log(React);
+
 // [3] function type with JSX
 const Greeting3 = (props) => {
   return (
