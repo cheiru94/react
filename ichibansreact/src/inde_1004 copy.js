@@ -10,13 +10,16 @@ ReactDOM.render(
   element,   // 컴포넌트
   document.querySelector('#root') // 표시될 위치
 );
-*/
+ */
+
+
 // 최신방식
 /* const name = 'dr.hong';
 const element = <h1>안녕하세요?{name}</h1>;
 ReactDOM.createRoot(document.querySelector('#root')).render(
   <>{element}</>
 ); */
+
 
 /* 
 const person = {
