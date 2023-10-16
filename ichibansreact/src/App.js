@@ -1,9 +1,9 @@
 import './App.css';
-import Abc from './components/Abc'
-import Box from './components/Box';
-import Box1 from './components/Box1';
-import Box2 from './components/Box2';
-//import Welcome from './components/Welcome';
+import Abc from './components/exam1/Abc'
+import Box from './components/exam1/Box';
+// import Box1 from './components/exam1/Box1';
+// import Box2 from './components/exam1/Box2';
+// import Welcome from './components/Welcome';
 
 function App() {
   // 작업처리
@@ -20,12 +20,12 @@ function App() {
       <Box name='??색상자' color='rgba(255,0,0,0.2)' />
       <Box />
       <hr />
-      <Box1 name='무명상자' color='rgba(111,111,111,0.8)' >
+      {/* <Box1 name='무명상자' color='rgba(111,111,111,0.8)' >
         어떤게 나타나나?
         <p>잘 보일까요?</p>
       </Box1>
 
-      <Box2 name='상자' color='rgba(255,85,51,0.6)' />
+      <Box2 name='상자' color='rgba(255,85,51,0.6)' /> */}
     </div>
   );
 }

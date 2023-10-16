@@ -1,69 +1,78 @@
-
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
-import "./App.css";
 
+// useState, useEffect 예시
 
-// 강의 자료 참고 
-// const el = React.createElement;
-// el(
-//   'h1', props, 'test'
-// );
+const Info = (props) => {
+  const [name, setName] = useState('');
+  const [pwd, setPwd] = useState('');
 
-
-
-/* 🟢 [1] if 문 사용 */
-// const App = () => {
-//   let result = null;
-//   const loginCheck = 'y';
-
-
-//   if (loginCheck === 'y') {
-//     result = <h3>이재일님 환영 합니다.</h3>
-//   } else {
-//     result = <h3>단디 입력 안하나 마 </h3>
-//   }
-// return result;
-// }
-
-
-/* 🟢 [2] 삼항 연산자 or &&(AND) */
-// const App = () => {
-//   let loginCheck = 'y';
-//   return (
-//     <>
-//       {
-//         loginCheck === 'y' ? <h3>이재일님 환영 합니다.</h3> : <h3>디 입력 안하나 마 </h3>
-//       }
-//       {loginCheck === 'y' && <h3>이재일님 환영 합니다.</h3>}
-//     </>
-//   )
-// }
-
-/* 🟢 [3] IIFE (Immediately Invoked Function Expression)  : 즉시 호출되는 함수 표현식*/
-// 형식 : (이름없는 함수 정의) ()
-// 이름없는 함수를 정의하고 곧 바로 호출
-const App = () => {
-  const loginCheck = 'y';
-
-  return (<>
-    {
-      // JSX내에서 JS 코드 실행
-      (() => { // 이름없는 함수 정의
-
-        //if 문, 삼항 연산자 , && 사용가능하다
-        // return loginCheck === 'y' && <h1>안녕 하시소</h1>
-        return loginCheck === 'y' ? <h1>이재일님 환영 합니다</h1> : <h2>안녕하시소!</h2>
-
-      })()  // 정의와 함께 여기서 바로 호출한다는 의미
+  useEffect(
+    () => {
+      console.log('렌더링 완료됨');
+      console.log(
+        { name, pwd }
+        // {name:name, pwd:pwd}
+      );
+      // 로그인처리---> 성공하면
+      return (  // cleanup
+        () => {
+          console.log('뒷처리');
+          console.log(
+            { name, pwd }
+          );
+        }
+      );
     }
+    //,[]
+    , [name]
+  );
 
-  </>)
-}
+
+  const changeName = (e) => {
+    setName(e.target.value);
+  };
+  const changePwd = (e) => {
+    setPwd(e.target.value);
+  };
+  return (<>
+    <input value={name} onChange={changeName} />
+    <input value={pwd} onChange={changePwd} />
+    <hr />
+    <div>
+      <div><b>이름:</b>{name}</div>
+    </div>
+    <div>
+      <div><b>패스워드:</b>{pwd}</div>
+    </div>
+
+  </>);
+};
+
+const App = () => {
+  const [visible, setVisible] = useState(false);
+  return (
+    <>
+      <div
+        onClick={
+          () => {
+            setVisible(!visible);
+          }
+        }
+      >
+        <button>
+          {visible ? '숨기기' : '보이기'}
+        </button>
+      </div>
+      <hr />
+      {visible && <Info />}
+    </>
+  )
+
+};
 
 ReactDOM.createRoot(document.querySelector('#root')).render(
   <>
     <App />
-
   </>
 );

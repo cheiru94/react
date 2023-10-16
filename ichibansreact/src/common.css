@@ -1,0 +1,25 @@
+body,div {
+  margin: 0;
+  padding: 0;
+  font-family: '나눔바른고딕';
+  box-sizing: border-box;
+}
+
+/* 
+  border-box : border 위주      // 내용을 자르더라도 기존 div 크기를 유지한다
+  content-box : content 위주     // 내용 떄문에 박스 크기가 커진다. , 내용 부분의 크기에 따라 박스 크기가 변경
+*/
+
+.textBox{
+  background-color: red;
+  width: 500px;
+  height: 100px;
+}
+.textBox2{
+  background-color: skyblue;
+  width: 500px;
+  height: 100px;
+  border: 10px solid;
+  /* box-sizing: border-box; */
+  box-sizing: content-box;
+}
