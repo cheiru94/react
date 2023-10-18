@@ -2,52 +2,69 @@ import React, { useState, useEffect, useRef } from 'react';
 import ReactDOM from 'react-dom/client';
 
 
-/* 변수로 사용 했을 때의 useRef */
-
+/* 🟢 특정 엘리먼트를 선택 useRef 🟢*/
+/* 자식 요소도 건들여 보기  */
 const App = () => {
-  const [n, setN] = useState(0);
-
-  // 렌더링 되지 않는다.( 근데 안에 설정한 로직은 움직이고 있다.)
-  const todoIdx = useRef(0); // todoIdx = { current:0 } 의 의미가 된다
-  console.log(todoIdx);
+  const inputRef = useRef();
 
 
-  /* 🟠 1 */
-  // useEffect(() => {
-  //   console.log('렌더링 했음');
-  // });
-
-  /* 🟠 2 */
-  // useEffect(() => {
-  //   console.log('렌더링 했음');
-  // }, [n]);
-
-  /* 🟠 3 */
+  // useEffect 
   useEffect(() => {
-    console.log('렌더링 했음');
-  }, [todoIdx.current]);
+    console.log(inputRef.current)
+    // inputRef.current.focus();
+  }, []); //  1번만 실행
 
+  const inputId = () => {
 
-  const addTodo = () => {
-    todoIdx.current = todoIdx.current + 1;
-    // console.log(todoIdx);
-    console.log(todoIdx.current);
-  }
+    console.log(inputRef.current.value)
+    console.log(inputRef.current.value.length)
+    console.log(inputRef.current.value.size)
+    if (inputRef.current.value.length > 8) {
+      alert('아이디의 길이는: 8이하')
+      inputRef.current.value = null;
+    }
+  };
 
 
   return (
     <>
-      <h1>카운터: {n}</h1>
-      <button onClick={() => setN(n + 1)} > +1 </button>
-      <hr></hr>
+      <form action="">
+        {/* <fieldset>은 HTML에서 관련된 폼 요소들을 그룹화하는 데 사용되는 태그입니다. 
+         <fieldset>은 일련의 관련된 입력 필드를 하나의 그룹으로 묶어서 
+         구조적으로 표현할 수 있도록 도와줍니다. */}
+        <fieldset style={{ padding: '50px' }}>
+          <legend>회원가입</legend>
+          {/* JSX : 자바스크립트의 for과 같기 때문에 html이라 명시해서 htmlFor로 명시한다 */}
+          <label htmlFor="mid">ID</label> :
+          <input
+            type="text"
+            ref={inputRef} // 리액트의 input 엘리먼트가 된다. 
+            size='24'
+            style={{ padding: "10px" }}
+            autoComplete='off'
+            id='mid'
+            placeholder='ID를 입력하세요...'
+            onChange={inputId}
+          />
 
-      <h1>todoIdx:{todoIdx.current}</h1>
-      {/* <button onClick={addTodo} > 새로할 일 추가 </button> */}
-      <button onClick={() => {
-        addTodo()  // useRef의 state
-        setN(n + 1); // useState의 state
+          <br /> <br />
 
-      }}> 새로할 일 추가 </button>
+          <legend htmlFor="email">e-mail</legend>
+          {/* JSX : 자바스크립트의 for과 같기 때문에 html이라 명시해서 htmlFor로 명시한다 */}
+          <input
+            type="text"
+            id='email'
+            // ref={inputRef} // 리액트의 input 엘리먼트가 된다. 
+            size='30'
+            style={{ padding: "10px" }}
+            autoComplete='off'
+            placeholder='ID를 입력하세요...'
+            onChange={inputId}
+          />
+
+
+        </fieldset>
+      </form>
     </>
   )
 };
