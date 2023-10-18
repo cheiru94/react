@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import ReactDOM from 'react-dom/client';
 
 
-
+/* 변수로 사용 했을 때의 useRef */
 
 const App = () => {
   const [n, setN] = useState(0);
@@ -12,17 +12,17 @@ const App = () => {
   console.log(todoIdx);
 
 
-  /* 1 */
+  /* 🟠 1 */
   // useEffect(() => {
   //   console.log('렌더링 했음');
   // });
 
-  /* 2 */
-  useEffect(() => {
-    console.log('렌더링 했음');
-  }, [n]);
+  /* 🟠 2 */
+  // useEffect(() => {
+  //   console.log('렌더링 했음');
+  // }, [n]);
 
-  /* 3 */
+  /* 🟠 3 */
   useEffect(() => {
     console.log('렌더링 했음');
   }, [todoIdx.current]);
@@ -42,7 +42,12 @@ const App = () => {
       <hr></hr>
 
       <h1>todoIdx:{todoIdx.current}</h1>
-      <button onClick={addTodo} > 새로할 일 추가 </button>
+      {/* <button onClick={addTodo} > 새로할 일 추가 </button> */}
+      <button onClick={() => {
+        addTodo()  // useRef의 state
+        setN(n + 1); // useState의 state
+
+      }}> 새로할 일 추가 </button>
     </>
   )
 };
