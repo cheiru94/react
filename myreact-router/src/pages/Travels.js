@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Travel from '../components/Travel';
 
 
@@ -12,23 +12,49 @@ export default function Travels() {
   const [travels, setTravels] = useState([]);
   const [flag, setFlag] = useState(false); // 🟢 1. state로 눌렀냐 안 눌렀냐 상태 관리 
 
-
   //  const name='한국'
   //  const img='https://cdn.pixabay.com/photo/2020/08/09/11/31/business-5475283_1280.jpg'
 
+  /* 🟢 useEffect 사용 */
+  // useEffect( () => {
+  //   clickHan();
+  // }, [])
+  useEffect(() => {
+    (async function () {   // ussEffect 의 콜백함수에는 async를 사용할 수 없다!! 에라 떠뿌더라
+      const response = await fetch("http://localhost:3100/travels");
+      const jsonData = await response.json();
+      setTravels([...jsonData]);
+
+      setFlag(prev => !prev)
+    })()
+  }, [])
+
+
+  /* 🟢 함수로 따로 사용 */
   async function clickHan(e) {
     const response = await fetch("http://localhost:3100/travels");
     const jsonData = await response.json();
     setTravels([...jsonData]);
 
     setFlag(prev => !prev) // 🟢 2. 버튼 누름에 따라 적절한 true , false 부여 
-
   }
+
+  // 백업 용
+  // async function clickHan(e) {
+  //   const response = await fetch("http://localhost:3100/travels");
+  //   const jsonData = await response.json();
+  //   setTravels([...jsonData]);
+
+  //   setFlag(prev => !prev) // 🟢 2. 버튼 누름에 따라 적절한 true , false 부여 
+  // }
+
+
   return (<div className='container mt-5'>
     <button
-      onClick={clickHan}
-      className='btn btn-outline-primary'>
-      여행지 데이터 불러오기
+      onClick={() => { setFlag(p => !p) }}
+      // onClick={clickHan}
+      className='btn btn-outline-primary mybtn'>
+      {flag ? "여행지 사진" : "여행지 데이터 불러오기"}
     </button>
     <hr />
     {/* <Travel name={name} img={img} />
