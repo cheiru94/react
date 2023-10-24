@@ -1,21 +1,21 @@
-// import React, { Fragment } from 'react'
-// import Welcome from './Welcome'
-// // rafce
-// // rfce
+import React, { Fragment } from 'react'
+import Welcome from './Welcome'
+// rafce
+// rfce
 
 
-// const Abc = () =>
-// // (
-// //   <h2>
-// //     乾杯、今君は人生の大きな大きな舞台に立ち
-// //   </h2>
-// // )
+const Abc = () =>
 // (
-//   <Fragment>
-//     <Welcome />
-//     <Welcome />
-//   </Fragment>
-
+//   <h2>
+//     乾杯、今君は人生の大きな大きな舞台に立ち
+//   </h2>
 // )
+(
+  <Fragment>
+    <Welcome />
+    <Welcome />
+  </Fragment>
 
-// export default Abc
+)
+
+export default Abc

@@ -8,6 +8,8 @@ const App = () => {
   const [n, setN] = useState(0);
 
   // 렌더링 되지 않는다.( 근데 안에 설정한 로직은 움직이고 있다.)
+
+
   const todoIdx = useRef(0); // todoIdx = { current:0 } 의 의미가 된다
   console.log(todoIdx);
 

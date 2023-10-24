@@ -45,11 +45,14 @@ const Counter =(props)=>{
 }; */
 
 const Counter = (props) => {
+
   const [num, setNum] = useState(props.count);
   console.log(num);
+
   const inCrease = () => {
     setNum(num + 1);
   };
+
   const deCrease = () => {
     if (num === 0) {
       console.log('0 이하로는 불가');
@@ -57,6 +60,7 @@ const Counter = (props) => {
     }
     setNum(num - 1)
   };
+
   return (
     <>
       <h1>{num}</h1>

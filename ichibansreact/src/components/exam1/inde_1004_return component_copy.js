@@ -86,8 +86,24 @@ ReactDOM.createRoot(document.querySelector('#root')).render(
 
 
 /* 컴포넌트를 리턴하는 함수 */
+
+// 🟢 함수 이름 적어 주기
+// const MyObj = {
+//   ColorPicker: function ColorPicker(props) {
+//     return (
+//       <div style={{ backgroundColor: props.color }}>
+//         선택한 색상은:
+//         <b>
+//           {props.color}
+//         </b>
+//       </div>
+//     );
+//   }
+// }
+
+// 🟢 함수 이름 안 적기
 const MyObj = {
-  ColorPicker: function ColorPicker(props) {
+  ColorPicker: function (props) {
     return (
       <div style={{ backgroundColor: props.color }}>
         선택한 색상은:
@@ -106,6 +122,7 @@ function BlueColorPicker() {
 function RedColorPicker() {
   return <MyObj.ColorPicker color='red' />
 }
+
 
 
 ReactDOM.createRoot(document.querySelector('#root')).render(

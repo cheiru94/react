@@ -14,7 +14,7 @@ const App = (props) => {
       <TestProps first='dr.hong' second='홍박사' third='🎨🥊🥋' /> */}
 
 
-      <TestProps first='dr.hong' second='홍박사' third='🎨🥊🥋' fourth='남' />
+      <TestProps first='12' second='홍박사' third='🎨🥊🥋' fourth='남' />
       <TestProps first='dr.hong' second='홍박사' third='🎨🥊🥋' />
       <TestProps first='dr.hong' second='홍박사' third='🎨🥊🥋' fourth='여' />
       <TestProps first='dr.hong' second='홍박사' third='🎨🥊🥋' fourth='놈' />
