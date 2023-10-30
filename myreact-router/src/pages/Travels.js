@@ -8,7 +8,14 @@ import Travel from '../components/Travel';
   {id:'3',name:'일본',imglink:'https://cdn.pixabay.com/photo/2017/01/28/02/24/japan-2014619_1280.jpg'},
 ];  */
 
-export default function Travels() {
+const exptravels = [
+  { id: '1', name: 'korea', imglink: 'https://media.istockphoto.com/id/621371796/ko/%EC%82%AC%EC%A7%84/%EC%84%9C%EC%9A%B8%EC%8B%9C%ED%8B%B0-%EC%8A%A4%EC%B9%B4%EC%9D%B4%EB%9D%BC%EC%9D%B8%EC%9D%BC%EB%AA%B0.jpg?s=612x612&w=0&k=20&c=0-ywWemeoRokQaJzBSUpptXRHfy5n8zGu7CAQ_afoeU=' },
+  { id: '2', name: 'america', imglink: 'https://cdn.pixabay.com/photo/2018/08/15/17/17/mount-rushmore-3608620_1280.jpg' },
+  { id: '3', name: 'japan', imglink: 'https://cdn.pixabay.com/photo/2017/01/28/02/24/japan-2014619_1280.jpg' },
+];
+
+// 컴포넌트 내용
+function Travels() {
   const [travels, setTravels] = useState([]);
   const [flag, setFlag] = useState(false); // 🟢 1. state로 눌렀냐 안 눌렀냐 상태 관리 
 
@@ -42,6 +49,9 @@ export default function Travels() {
 
   //   setFlag(prev => !prev)
   // }, []);
+  /* 🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡
+
+
 
   /* 🟢 함수로 따로 사용 */
   async function clickHan(e) {
@@ -93,3 +103,5 @@ export default function Travels() {
 
   </div>);
 }
+
+export { Travels as default, exptravels };
