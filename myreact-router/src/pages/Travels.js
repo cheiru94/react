@@ -15,12 +15,12 @@ export default function Travels() {
   //  const name='한국'
   //  const img='https://cdn.pixabay.com/photo/2020/08/09/11/31/business-5475283_1280.jpg'
 
-  /* 🟢 1. useEffect 사용 */
-  // useEffect( () => {
-  //   clickHan();
-  // }, [])
+  /* 🟢 1. useEffect 사용 - 함수 불러 사용 */
+  useEffect(() => {
+    clickHan();
+  }, [])
 
-  /* 🟢 2. useEffect 사용 */
+  /* 🟢 2. useEffect 사용 - 함수 즉시 실행 */
   // useEffect(() => {
   //   (async function () {   
   //     const response = await fetch("http://localhost:3100/travels");
@@ -35,16 +35,19 @@ export default function Travels() {
     // ussEffect 의 콜백함수에는 async를 사용할 수 없다!! 에라 떠뿌더라
     Effect callbacks are synchronous to prevent race conditions. Put the async function inside:
   */
-  useEffect(async () => {
-    const response = await fetch("http://localhost:3100/travels");
-    const jsonData = await response.json();
-    setTravels([...jsonData]);
+  // useEffect(async () => {
+  //   const response = await fetch("http://localhost:3100/travels");
+  //   const jsonData = await response.json();
+  //   setTravels([...jsonData]);
 
-    setFlag(prev => !prev)
-  }, []);
+  //   setFlag(prev => !prev)
+  // }, []);
 
   /* 🟢 함수로 따로 사용 */
   async function clickHan(e) {
+    /* npx json-server --watch db.json --port 3100 
+       만든 json 폴더에서 서버를 실행 시켜야 한다
+    */
     const response = await fetch("http://localhost:3100/travels");
     const jsonData = await response.json();
     setTravels([...jsonData]);
