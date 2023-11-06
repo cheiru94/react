@@ -9,7 +9,7 @@ import Travel from '../components/Travel';
 ];  */
 
 const exptravels = [
-  { id: '1', name: 'korea', imglink: 'https://media.istockphoto.com/id/621371796/ko/%EC%82%AC%EC%A7%84/%EC%84%9C%EC%9A%B8%EC%8B%9C%ED%8B%B0-%EC%8A%A4%EC%B9%B4%EC%9D%B4%EB%9D%BC%EC%9D%B8%EC%9D%BC%EB%AA%B0.jpg?s=612x612&w=0&k=20&c=0-ywWemeoRokQaJzBSUpptXRHfy5n8zGu7CAQ_afoeU=' },
+  { id: '1', name: 'korea', imglink: 'https://cdn.pixabay.com/photo/2020/08/09/11/31/business-5475283_1280.jpg' },
   { id: '2', name: 'america', imglink: 'https://cdn.pixabay.com/photo/2018/08/15/17/17/mount-rushmore-3608620_1280.jpg' },
   { id: '3', name: 'japan', imglink: 'https://cdn.pixabay.com/photo/2017/01/28/02/24/japan-2014619_1280.jpg' },
 ];
@@ -103,5 +103,4 @@ function Travels() {
 
   </div>);
 }
-
 export { Travels as default, exptravels };

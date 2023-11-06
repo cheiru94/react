@@ -5,7 +5,7 @@ export default function NavbarTest() {
   return (
     <>
       {/*  <h3>Main페이지</h3> */}
-      <Navbar collapseOnSelect expand="lg" bg="primary" variant="dark">
+      <Navbar collapseOnSelect expand="lg" bg="info" variant="dark">
         <Container>
           <Navbar.Brand href="/">여행 소개</Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
